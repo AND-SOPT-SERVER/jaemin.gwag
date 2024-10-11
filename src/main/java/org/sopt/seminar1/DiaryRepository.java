@@ -36,8 +36,8 @@ public class DiaryRepository {
         }
 
         void delete(final long id){
-                if(id > numbering.intValue() || id ==0){
-                        System.out.println("존재하지 않는 값입니다");
+                if(id > numbering.intValue()){
+                        throw new Main.UI.InvalidInputException(); //1부터 시작하니까 굳이 0을 받을 필요 없음
                 } else{
                         storage.remove(id);
                         numbering.decrementAndGet();
@@ -45,22 +45,17 @@ public class DiaryRepository {
         }
 
         void patch(Long id, String body){
-                if(id > numbering.intValue() || id ==0){
-                        System.out.println("존재하지 않는 값입니다");
-                } else{
-                        if(DayNumbering.intValue()> 1){
-                                System.out.println("하루에 2번만 수정가능합니다");
+                if(DayNumbering.intValue()> 1){
+                                System.out.println("하루에 2번만 수정가능합니다"); //IF문 안에 IF문을 넣는 것은 지양해야함
                         }
-                        else{
-                                DayNumbering.addAndGet(1);
-                                storage.replace(id, body);
+                else{
+                        DayNumbering.addAndGet(1); //else문 -> 또한 지양 , 예외처리를 통해서
+                        storage.replace(id, body);
                         }
 
                 }
 
 
-        }
-
-
 }
+
 

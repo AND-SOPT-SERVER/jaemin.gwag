@@ -15,14 +15,12 @@ public class DiaryService {
             return diaryRepository.findAll();
         }
 
-        void deleteDiary(final String id){
-            final Long deleteId = (long) Integer.parseInt(id);
-            diaryRepository.delete(deleteId);
+        void deleteDiary(final Long id){
+            diaryRepository.delete(id);
         }
 
-        void patchDiary(final String id, final String body){
-            final Long patchId = (long) Integer.parseInt(id);
-            diaryRepository.patch(patchId, body);
+        void patchDiary(final Long id, final String body){
+            diaryRepository.patch(id, body);
         }
     }
 
