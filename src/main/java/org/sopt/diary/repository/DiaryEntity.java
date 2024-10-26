@@ -21,6 +21,10 @@ public class DiaryEntity {
 
     }
 
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     public  DiaryEntity(String name, String content, LocalDate date){
         this.content = content;
         this.name = name;
@@ -42,6 +46,7 @@ public class DiaryEntity {
         return date;
     }
 
-
-
+    public void setName(String name) {
+        this.name = name;
+    }
 }

@@ -1,10 +1,29 @@
 package org.sopt.diary.service;
 
-public class Diary {
-    private final long id;
-    private final String name;
+import java.time.LocalDate;
 
-    public Diary(long id, String name){
+public class Diary {
+    private final Long id;
+    private final String name;
+    private String content;
+    private LocalDate date;
+
+    public Diary(Long id, String name, String content, LocalDate date) {
+        this.id = id;
+        this.name = name;
+        this.date = date;
+        this.content = content;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public Diary(Long id, String name){
         this.id = id;
         this.name = name;
     }
