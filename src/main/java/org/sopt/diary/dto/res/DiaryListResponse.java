@@ -1,8 +1,6 @@
 
-package org.sopt.diary.api;
-import org.sopt.diary.api.DiaryResponse;
+package org.sopt.diary.dto.res;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DiaryListResponse {

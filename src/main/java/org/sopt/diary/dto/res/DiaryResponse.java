@@ -1,4 +1,4 @@
-package org.sopt.diary.api;
+package org.sopt.diary.dto.res;
 
 import java.time.LocalDate;
 
