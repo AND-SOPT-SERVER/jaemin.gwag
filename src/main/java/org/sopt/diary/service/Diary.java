@@ -7,12 +7,18 @@ public class Diary {
     private final String name;
     private String content;
     private LocalDate date;
+    private String scope;
+    private int userId;
+
+
+
 
     public Diary(Long id, String name, String content, LocalDate date) {
         this.id = id;
         this.name = name;
         this.date = date;
         this.content = content;
+
     }
 
     public String getContent() {
