@@ -44,7 +44,7 @@ public class DiaryRepository {
                 }
         }
 
-        void patch(Long id, String body){
+        void patch(final Long id, String body){
                 if(DayNumbering.intValue()> 1){
                                 System.out.println("하루에 2번만 수정가능합니다"); //IF문 안에 IF문을 넣는 것은 지양해야함
                         }
